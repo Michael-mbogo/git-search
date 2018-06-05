@@ -14,8 +14,10 @@ import { ProfileComponent } from './profile/profile.component';
   ],
   imports: [
     BrowserModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
