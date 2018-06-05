@@ -11,33 +11,28 @@
   </form>
   <br>
 
-  <nav class="panel fadein" *ngIf="user">
-    <p class="panel-heading">{{ user?.name }}</p>
-    <div class="panel-block">
-      <div class="section">
-        <div class="column is-one-third">
-          <img class="image" src="{{ user?.avatar_url }}" alt="Profile Picture">
+
+  <div class="postuser" *ngIf="user">
+    <p class="username">{{ user?.name }}</p>
+    <div class="section">
+      <div class="avatar">
+        <img class="image" src="{{ user?.avatar_url }}" alt="Profile Picture">
+      </div>
+      <div class="section2">
+        <div class="tags">
+          <span class="repo">{{ user?.public_repos }} Public Repos. </span>
+          <span class="gists">{{ user?.public_gists }} Public Gists. </span>
+          <span class="followers">{{ user?.followers }} Followers. </span>
+          <span class="following">{{ user?.following }} Following. </span>
         </div>
-        <div class="section2">
-          <div class="tags">
-            <span class="repo">{{ user?.public_repos }} Public Repos. </span>
-            <span class="gists">{{ user?.public_gists }} Public Gists. </span>
-            <span class="followers">{{ user?.followers }} Followers. </span>
-            <span class="following">{{ user?.following }} Following. </span>
-          </div>
-          <div class="list">
-            <ul>
-              <li>Name: {{user?.login }}</li>
-              <li>From: {{user?.location}}</li>
-              <li>Member since: {{ user?.created_at | date: 'shortDate' }}</li>
-
-            </ul>
-
-          </div>
-
-
+        <div class="list">
+          <ul>
+            <li>Name: {{user?.login }}</li>
+            <li>From: {{user?.location}}</li>
+            <li>Member since: {{ user?.created_at | date: 'shortDate' }}</li>
+          </ul>
         </div>
       </div>
     </div>
-
+  </div>
     <br>
