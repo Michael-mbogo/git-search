@@ -15,7 +15,21 @@ export class ProfileService {
   constructor(private http:HttpClient) {
     console.log("Service is now ready!");
     this.username= 'Michael-mbogo';
-}
+  }
+
+    getUser() {
+    return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+
+    }
+
+    getRepo() {
+     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+
+    }
+
+   updateUser(username:string){
+     this.username = username;
+    }
 
   constructor() { }
 }
