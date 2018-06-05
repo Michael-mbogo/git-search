@@ -13,7 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
     FormsModule,
     HttpClientModule
   ],
