@@ -20,6 +20,19 @@ export class ProfileComponent implements OnInit {
       this.user=user;
     });
 
+    this.profileService.getRepo().subscribe(repo => {
+      console.log(repo);
+      this.repo=repo;
+    });
+    this.profileService.updateUser(this.username);
+
+    }
+
+    reset() {
+      this.user = null;
+      this.username = null;
+    }
+
 
   ngOnInit() {
   }
