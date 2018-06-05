@@ -41,34 +41,3 @@
         </div>
       </div>
     </div><br>
-
-    <!-- Repository Details Panel -->
-    <nav class="panel">
-      <h1 class="panel-heading">Repos</h1>
-      <div class="panel-block">
-        <div class="columns">
-          <div class="column">
-            <div *ngFor="let repo of repos">
-              <div class="columns">
-                <div class="column is-three-quarters">
-                  <h4 class="title is-4">
-                    <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
-                  </h4>
-                  <p>{{ repo.description }}</p>
-                </div>
-                <div class="column">
-                  <div class="tags is-centered">
-                    <span class="tag is-link is-rounded">{{ repo.watchers }} Stars</span>
-                    <span class="tag is-info is-rounded">{{ repo.forks }} Forks</span>
-                  </div>
-                </div>
-              </div>
-              <hr>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </nav>
-
-</div>
