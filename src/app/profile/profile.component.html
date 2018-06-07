@@ -35,3 +35,25 @@
       </div>
     </div>
   </div>
+
+
+ <div class="container2">
+    <div class="track">
+      <p> Repositories:  <span class=label-label-primary >{{user?.public_repos}}</span></p>
+      <p> Followers:  {{user?.followers}}</p>
+      <p> Following:  {{user?.following}}</p>
+   </div>
+  </div>
+
+    <strong><h3 class="panel-title">Repos</h3></strong>
+
+    <div *ngFor ="let repo of repos">
+      <div class="row">
+        <div class="grid-item">
+          <h4><a href="user.html_url" target="_blank">{{repo?.name}}</a></h4>
+          <p>{{repo?.apiUrl}}</p>
+            </div>
+          </div>
+        </div>
+
+   </div>
